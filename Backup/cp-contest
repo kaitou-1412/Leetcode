@@ -1,0 +1,11 @@
+#!/bin/bash -e
+echo -n "Contest Name:"
+read contest
+mkdir "$contest"
+
+touch "$contest"/input.txt
+touch "$contest"/output.txt 
+
+tee "$contest"/{A..F}.cpp < /home/ruban/Templates/template.cpp > /dev/null
+
+nvim "$contest"/. 
